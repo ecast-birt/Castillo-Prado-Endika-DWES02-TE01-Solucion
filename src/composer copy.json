@@ -1,0 +1,15 @@
+{
+    "name": "casti/mvc_php_template_dwes",
+    "autoload": {
+        "psr-4": {
+            "Casti\\MvcPhpTemplateDwes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ecastillo",
+            "email": "ecastillo@ikaslea.birt.eus"
+        }
+    ],
+    "require": {}
+}

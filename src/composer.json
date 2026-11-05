@@ -1,15 +1,10 @@
 {
-    "name": "casti/mvc_php_template_dwes",
+    "name": "dwes/autoload-composer2",
+    "type": "project",
     "autoload": {
         "psr-4": {
-            "Casti\\MvcPhpTemplateDwes\\": "src/"
+            "App\\": "app/"
         }
     },
-    "authors": [
-        {
-            "name": "Ecastillo",
-            "email": "ecastillo@ikaslea.birt.eus"
-        }
-    ],
     "require": {}
 }

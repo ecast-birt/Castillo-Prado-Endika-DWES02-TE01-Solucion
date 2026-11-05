@@ -16,16 +16,25 @@ function request(): string
 }
 
 $metodoActual = request();
+$controller = new VehicleController();
 
 if ($metodoActual === "GET" ) {
-    $controller = new VehicleController();
+    
 
     $id = $_GET["id"] ?? null;
     $vehiculo = $controller->getById($_GET['id']);
-    require_once __DIR__ . '/../app/Views/vehiculo_get.php'; ;
+    require_once __DIR__ . '/../app/Views/vehiculo_get.php'; 
     //var_dump($vehiculo);
 } 
 
 if ($metodoActual === "POST" ) {
-    ;
+    $jsonString = $_POST['jsonPost'];
+    $vehiculoData = json_decode($jsonString, true);
+
+    $vehiculo= $controller->store($vehiculoData);
+    
+
+   
+    require_once __DIR__ . '/../app/Views/vehiculo_post.php'; 
+    
 } 

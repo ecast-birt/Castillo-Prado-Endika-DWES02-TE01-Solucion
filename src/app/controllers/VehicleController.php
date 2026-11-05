@@ -10,9 +10,20 @@ use App\Models\Vehiculo;
 
 class VehicleController {
     
-    public function store($vehiculoData): ?Vehiculo{
+    public function store($vehiculoData): array {
+        $arrayVehiculos = $this->leerVehiculos();
         
-        return null;       
+        $data = $vehiculoData;
+        $vehiculoTemp = null;
+
+        if ($data['tipo'] === 'coche') {
+            $vehiculoTemp =  new Coche($data['id'], $data['marca'], $data['modelo'],$data['anio'],$data['tipo'],$data['puertas']);
+        } else if ($data['tipo'] === 'moto') {
+            $vehiculoTemp = new Moto($data['id'], $data['marca'], $data['modelo'],$data['anio'],$data['tipo'],$data['sidecar']) ;
+        }
+        $arrayVehiculos[]= $vehiculoTemp ;
+
+        return $arrayVehiculos;       
     }
     /*crearemos la fucion getById en el qe le daremos el id de un coche y nos devolvera 
     un objeto tipo vehiculo
@@ -25,13 +36,7 @@ class VehicleController {
         // 2. Recorremos el array buscando el ID que coincide
         foreach ($arrayVehiculos as $data) {
             if ($data->getId() === filter_var($id,FILTER_VALIDATE_INT)) {
-                /*
-                if ($data['tipo'] === 'coche') {
-                    return new Coche($data['id'], $data['marca'], $data['modelo'],$data['anio'],$data['tipo'],$data['puertas']);
-                } else if ($data['tipo'] === 'moto') {
-                    return new Moto($data['id'], $data['marca'], $data['modelo'],$data['anio'],$data['tipo'],$data['sidecar']) ;
-                }
-                */
+
                 $vehiculoReturn = $data;
                 return $vehiculoReturn;
             }

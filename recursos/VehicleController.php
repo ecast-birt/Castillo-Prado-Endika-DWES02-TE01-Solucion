@@ -10,6 +10,7 @@ class VehicleController {
 
     public function getById($id): ?Vehiculo
     {
+        
         return null;
         
     }

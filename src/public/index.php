@@ -20,7 +20,6 @@ $controller = new VehicleController();
 
 if ($metodoActual === "GET" ) {
     
-
     $id = $_GET["id"] ?? null;
     $vehiculo = $controller->getById($_GET['id']);
     require_once __DIR__ . '/../app/Views/vehiculo_get.php'; 
@@ -33,8 +32,6 @@ if ($metodoActual === "POST" ) {
 
     $vehiculo= $controller->store($vehiculoData);
     
-
-   
     require_once __DIR__ . '/../app/Views/vehiculo_post.php'; 
     
 } 

@@ -22,7 +22,7 @@ if ($metodoActual === "GET" ) {
     
     $id = $_GET["id"] ?? null;
     $vehiculo = $controller->getById($_GET['id']);
-    require_once __DIR__ . '/../app/Views/vehiculo_get.php'; 
+    require_once __DIR__ . '/../app/views/vehiculo_get.php'; 
     //var_dump($vehiculo);
 } 
 

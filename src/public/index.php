@@ -31,7 +31,6 @@ if ($metodoActual === "POST" ) {
     $vehiculoData = json_decode($jsonString, true);
 
     $vehiculo= $controller->store($vehiculoData);
-    
     require_once __DIR__ . '/../app/views/vehiculo_post.php'; 
     
 } 

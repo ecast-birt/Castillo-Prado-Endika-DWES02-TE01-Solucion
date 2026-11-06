@@ -31,6 +31,6 @@
     <?php endif; ?>
 
     <br>
-    <a href="../index.html">Realizar otra búsqueda</a>
+    <a href="./index.html">Realizar otra búsqueda</a>
 </body>
 </html>

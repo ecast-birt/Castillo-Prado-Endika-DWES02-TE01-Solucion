@@ -10,4 +10,4 @@ if ($filePath !== false && strpos($filePath, $publicPath) === 0 && is_file($file
     return false;
 }
 
-require $publicPath . '/index.php';
+require $publicPath . '/index.html';

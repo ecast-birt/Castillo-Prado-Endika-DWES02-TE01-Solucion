@@ -32,6 +32,6 @@ if ($metodoActual === "POST" ) {
 
     $vehiculo= $controller->store($vehiculoData);
     
-    require_once __DIR__ . '/../app/Views/vehiculo_post.php'; 
+    require_once __DIR__ . '/../app/views/vehiculo_post.php'; 
     
 } 

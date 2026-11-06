@@ -1,11 +1,11 @@
 <?php
-namespace App\Controllers;
+namespace App\controllers;
 
 require __DIR__ . '/../../data/vehiculos_bbdd.php';
 
-use App\Models\Coche;
-use App\Models\Moto;
-use App\Models\Vehiculo;
+use App\models\Coche;
+use App\models\Moto;
+use App\models\Vehiculo;
 
 
 class VehicleController {

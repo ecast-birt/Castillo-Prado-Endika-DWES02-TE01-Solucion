@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php' ;
 
-use App\Controllers\VehicleController;
+use App\controllers\VehicleController;
 use App\Models\Vehicle;
 use App\Models\Coche;
 use App\Models\Moto;

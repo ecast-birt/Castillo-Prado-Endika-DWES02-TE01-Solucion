@@ -1,0 +1,10 @@
+{
+    "name": "dwes/autoload-composer2",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
